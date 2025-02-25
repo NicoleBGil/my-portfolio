@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+      background-image: url('/background.jpg'); /* Replace with actual image */
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  .glow-purple {
+    text-shadow: 0px 0px 15px rgba(400, 152, 252, 1);
+    animation: glow-purple 1.5s infinite alternate;
+  }
+  
+  @keyframes glow-purple {
+    from {
+      text-shadow: 0px 0px 10px rgba(200, 142, 252, 0.8);
+    }
+    to {
+      text-shadow: 0px 0px 20px rgba(200, 142, 252, 1);
+    }
+  }
+  .glow-white {
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+    animation: glow-white 1.5s infinite alternate;
+  }
+  
+
+  nav button {
+    position: relative;
+    z-index: 10; /* Ensures the glowing text is on top */
+  }
+  
+  nav button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    z-index: -1; /* Moves any duplicate text behind the background */
+  }
+  
+  .old-nav {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: -1000;
+  }
+  
