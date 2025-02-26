@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useInView } from "framer-motion";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -114,7 +115,7 @@ export default function Hero() {
   <img 
     src="/profile.jpg" 
     alt="Nicole Bencosme-Gil" 
-    className="relative w-[300px] h-[320px] object-cover rounded-full border-4 border-black-900 shadow-lg"
+    className="relative w-[300px] h-[400px] object-cover rounded-full border-4 border-black-900 shadow-lg"
   />
 </div>
 
@@ -221,9 +222,12 @@ export default function Hero() {
 
       {/* Projects Section */}
      {/* Projects Section */}
+     
+
 {/* Projects Section */}
 <section id="projects" ref={projectsRef} className="h-auto flex flex-col items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 text-white px-12 pb-40 mb-30">
   <h2 className="text-4xl font-bold text-purple-400 mb-4 text-center">/ projects</h2>
+  
   <div className="max-w-5xl w-full bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
     <h3 className="text-2xl font-semibold text-purple-300">Enhancing the Software Development Lifecycle</h3>
     <p className="text-gray-200">
@@ -234,6 +238,17 @@ export default function Hero() {
       It highlights the practical application of security measures across different SDLC phases—ranging from planning and design to implementation, testing, and maintenance.
       The study underscores the importance of structured, developer-centric security methodologies in fostering resilient software ecosystems.
     </p>
+
+    {/* Research Presentation Image */}
+    <div className="mt-6 flex justify-center">
+      <img
+        src="/poster-presentation.jpg"  // Ensure lowercase .jpg
+        alt="Nicole Bencosme-Gil presenting research poster"
+        width="500"
+        height="400"
+        className="rounded-lg shadow-lg"
+      />
+    </div>
 
     {/* Evaluation Section */}
     <p className="mt-5 text-lg font-semibold text-purple-400">Evaluation of:</p>
@@ -253,6 +268,7 @@ export default function Hero() {
     </p>
   </div>
 </section>
+
 
 
 
